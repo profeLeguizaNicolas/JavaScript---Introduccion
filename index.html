@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Contenidos iniciales.</title>
+    <link rel="shortcut icon" href="Imagenes/imagen1.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>Contenidos iniciales a <b class="amarillo">JavaScript</b>.</h1>
+
+    <div class="center">
+    <img src="Imagenes/imagen1.png" alt="" style="width: 18vw; height: 24vh;">
+    </div>
+    
+    <br>
+
+    <h2>Introducción: </h2>
+    <p>
+        <b class="amarillo">JavaScript</b> es un lenguaje de programación que se ejecuta en el navegador y permite que una página web deje de ser estática para volverse interactiva. Mientras que <b class="naranja">HTML</b> estructura el contenido y <b class="azul">CSS</b> lo diseña, <b class="amarillo">JavaScript</b> se encarga del comportamiento: <i>Responde a acciones del usuario, realiza cálculos, valida datos y modifica elementos en pantalla</i>.
+    </p>
+    <p>
+        Cuanto trabajos por primera vez con <b class="amarillo">JavaScript</b> es importante comprender cómo se conecta con el documento <b class="naranja">HTML</b> y cómo interactúa con el navegador.
+    </p>
+         
+    <hr>
+    <br>
+    <h2>
+        Vinculación de <b class="amarillo">JavaScript</b> con <b class="naranja">HTML</b>.
+    </h2>
+    <p>
+        La forma profesional de trabajar es utilizando un archivo externo. Esto permite mantener el código organizado, separado del contenido y más fácil de mantener.
+    </p>
+    <p>
+        Supongamos que tenemos un arachivo llamado <code class="gris">index.html</code>. Dentro de él escribimos la estructura básica de <b class="naranja">HTML</b>:
+    </p>
+<pre><code class="cpp">&lt;!<span class="colorE">DOCTYPE</span> <span class="colorA">html</span>> <span class="colorV">&lt;!-- Define que el documento es HTML --></span>
+&lt;<span class="colorE">html</span> <span class="colorA">lang</span>=<span class="colorD">"es"</span>> <span class="colorV">&lt;!-- Etiqueta principal o raiz que encierra todo el contenido del documento--></span>
+    &lt;<span class="colorE">head</span>>  <span class="colorV">&lt;!-- Contiene información del documento, como el titulo, enlaces a CSS--></span>
+        &lt;<span class="colorE">meta</span> <span class="colorA">charset</span>=<span class="colorD">"UTF-8"</span>> <span class="colorV">&lt;!-- Define la codificación de caracteres para soportar tildes y ñ--></span>
+        &lt;<span class="colorE">link</span> <span class="colorA">rel</span>=<span class="colorD">"shortcut icon"</span> <span class="colorA">href</span>=<span class="colorD">""</span> <span class="colorA">type</span>=<span class="colorD">"image/x-icon"</span>><span class="colorV">&lt;!-- Se utiliza para indicar el ícono de la página en la pestaña del navegador y, al dejar la ruta vacía, se evita que el navegador intente buscar un favicon inexistente y genere un error.--></span>
+        &lt;<span class="colorE">meta</span> <span class="colorA">name</span>=<span class="colorD">"viewport"</span> <span class="colorA">content</span>=<span class="colorD">"width-device-width, initial-scale=1.0"</span>><span class="colorV"> &lt;!-- Ajusta la visualización en dispositivos móviles--></span> 
+        &lt;<span class="colorE">title</span>>Mi primera Documento HTML&lt;/<span class="colorE">JavaScript</span>>   <span class="colorV">&lt;!-- Define el título que aparece en la pestaña del navegador--></span>
+    &lt;/<span class="colorE">head</span>>
+    &lt;<span class="colorE">body</span>> 
+         &lt;<span class="colorE">h1</span>>Introducción a JavaScript&lt;<span class="colorE">/h1</span>> 
+         &lt;<span class="colorE">script</span> <span class="colorA">src</span>=<span class="colorD">"main.js"</span>>&lt;/<span class="colorE">script</span>> 
+    &lt;/<span class="colorE">body</span>>
+&lt;/<span class="colorE">html</span>>
+</code>
+</pre>
+    <p>
+        La etiqueta <code class="gris">&lt;script></code> enlaza el archivo <b class="amarillo">JavaScript</b> mediante el atributo <span class="colorA">src</span>. En este caso el navegador buscará un archivo llamadoo <code class="gris">main.js</code> en la misma carpeta.
+    </p>
+    <p>
+        Es recomendable colocar esa línea justo antes de cerrar el <code class="gris">&lt;/body></code>, ya que de esta manera el contenido <b class="naranja">HTML</b> se carga primero y luego se ejecuta el código <b class="amarillo">JavaScript</b>.
+    </p>
+    <hr>
+    <br>
+    <h2>Creación del archivo <code>JavaScript</code></h2>
+    <p>
+        Una vez declarada la referencia al archivo externo mediante el atributo <span class="colorA">src</span>, se procede a la creación del archivo <code class="gris">main.js</code>.
+    </p>
+    <p> 
+        En el entorno <b class="azul">Visual Studio Code</b>, es posible generarlo directamente mediante la combinación <b>Ctrl</b> + <b>Clic</b> sobre el nombre del archivo indicado en el atributo. El editor creará automáticamente el archivo en la ubicación correspondiente, respetando la ruta especificada en el documento <b class="naranja">HTML</b>.
+    </p>
+    <div class="center">
+        <iframe width="596" height="365" src="https://www.youtube.com/embed/CpHecsX2zvY" title="JavaScript - Contenidos iniciales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <hr>
+    <br>
+    <h2>Introduccion a <code class="gris">console.log()</code></h2>
+    <p>
+        A continuación, se incorpora la primer linea de código con el objetivo de verificar el correcto funcionamiento de la vinculación:
+    </p>
+<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorV">"Vinculación exitosa"</span>);
+</code>
+</pre>
+    <p>
+        La instrucción <code class="gris">console.log()</code> permite mostrar información en la consola del navegador. En esta instancia, su finalidad es exclusivamente verificadora: confirmar que la integración entre el documento <b class="naranja">HTML</b> y el archivo <b class="amarillo">JavaScript</b> se ha realizado correctamente.
+    </p>
+    <p>
+        Para comprobar, se debe abrir el archivo <b class="naranja">HTML</b> en el navegador, acceder a las herramientas de desarrollador <code class="gris">tecla F12</code> y seleccionar la pestaña <b>Consola</b>. Si el mensaje se visualiza correctamete, la vinculación se encuentra operativa.
+    </p>
+    
+     <iframe width="1071" height="628" src="https://www.youtube.com/embed/2YOOxU4RU4A" title="JavaScript - Contenidos iniciales video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Declaración de variables en <b class="amarillo">JavaScript</b></h2>
+    <p>
+        En <b class="amarillo">JavaScript</b>, para declarar una variable se utilizan palabras reservadas del lenguaje. En la actualidad son <code>let</code> y <code>const</code>.
+    </p>
+    <h3>Uso de <code>let</code>.</h3>
+    <p>
+        La palabra reservada <code>let</code> se utiliza para declarar variables cuyo valor <b class="azul">puede cambiar durante la ejecución del programa</b>. Es la forma más común de declarar variables cuando se espera modificar el contenido almacenado.
+    </p>
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorD">"Juan"</span>;
+<span class="colorE">let</span> <span class="colorA">edad</span> = 25;
+<span class="colorA">console</span>.log(<span class="colorA">nombre</span>);
+<span class="colorA">console</span>.log(<span class="colorA">edad</span>);
+</code>
+</pre>
+    <b style="text-align: center;">Consola:</b>
+<pre><code class="cpp">Juan
+25
+</code>
+</pre>
+     <h3>Uso de <code>const</code>.</h3>
+     <p>
+        La palabra reservada <code>const</code> se utiliza para declarar variables cuyo valor <b class="azul">no debe cambiar</b> después de ser asignado.
+     </p>
+<pre><code class="cpp">
+<span class="colorE">const</span> <span class="colorA">PI</span> = <span class="colorD">3.1416</span>;
+<span class="colorA">console</span>.log(<span class="colorA">PI</span>); 
+</code>
+</pre>
+    <p>
+        Si se intenta modificar una variable declara con <code>const</code>, el interprete generará un error.
+    </p>
+<pre><code class="cpp">
+<span class="colorE">const</span> <span class="colorA">PI</span> = <span class="colorD">3.1416</span>;
+<span class="colorA">PI</span> = <span class="colorD">3.14</span>;
+</code>
+</pre>
+    <p>
+        Esto produce un error porque las constantes no pueden cambiar su valor.
+    </p>
+    <br>
+    <hr> 
+     <h2>La <b class="azul">consola</b> del Navegador.</h2>
+    <p>
+        La <b class="azul">consola</b> constituye una herramienta esencial para el desarrollo. Permite visualizar resultados, analizar el comportamiento del código y detectar posibles errores.
+    </p>
+
+    <p>
+        El método estándar para mostrar información es:
+    </p>
+<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorV">"Mensaje de prueba"</span>);
+</code>
+</pre>
+    <p>
+        También es posible mostrar el contenido de variables:
+    </p>
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">curso</span> = <span class="colorV">"Laboratorio de programación"</span>;
+<span class="colorA">console</span>.log(<span class="colorA">curso</span>)
+</code>
+</pre>
+    
+    <p>
+        Asimismo, la consola permite evaluar expresiones matemáticas:
+    </p>
+<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorD"> 15</span> + <span class="colorD">5 </span>);
+<span class="colorA">console</span>.log(<span class="colorD"> 20 </span>/<span class="colorD"> 4 </span>);
+</code>
+</pre>
+    <p>
+        Durante las primeras etapas del aprendizaje, la <b class="azul">consola</b> funciona como el principal medio de visualización de resultados.
+    </p>
+    <hr>
+    <br>
+    
+            <h2>Tipos de Datos.</h2>
+    
+    <p>
+       <b class="amarillo">JavaScript</b> es un lenguaje de tipado dinámico. El tipo de dato se determina automáticamente según el valor asignado a la variable.
+    </p>
+    
+    <b style="text-align: center;">Texto (String).</b><br>
+
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorD">"Juan"</span>;
+</code>
+</pre>
+
+    <p>
+        Representa secuencias de caracteres delimitadas por comillas dobles.
+    </p>
+
+    <b style="text-align: center;">Número (Number).</b><br>
+
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">edad</span> = <span class="colorD">30</span>;
+<span class="colorE">let</span> <span class="colorA">precio</span> = <span class="colorD">99.50</span>;
+</code></pre>
+    <p>
+        Incluye tanto números enteros como decimales.
+    </p>
+
+    <b style="text-align: center;">Booleano (Boolean).</b><br>
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">activo</span> = <span class="colorD">true</span>;
+<span class="colorE">let</span> <span class="colorA">aprobado</span> = <span class="colorD">false</span>;
+</code></pre>
+    <p>
+        Representa valores lógicos.
+    </p>
+
+    <b style="text-align: center;">Underfined</b>
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">dato</span>;
+<span class="colorA">console</span>.log(<span class="colorA">dato</span>);
+</code></pre>
+    <p>
+        Indica cuando una variable no ha sido definida.
+    </p>
+    <b style="text-align: center;">Null</b>
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">valor</span> = <span class="colorD">null</span>;
+</code></pre>
+    <p>
+        Representa la ausencia intencional de valor.
+    </p>
+     <b style="text-align: center;">NaN (Not a Number)</b>
+     <p>
+        En <b class="amarillo">JavaScript</b> existe un valor especial llamado <code>NaN</code>, que significa <i>Not a Number</i>(no es un número).
+     </p>
+     <p>
+        Este valor aparece cuando el programa intenta realizar una <b>operación matemática con datos que no pueden convertirse correctamente en números</b>.
+     </p>
+     <p>
+        Por ejemplo, si se intenta dividir texto que no representa un numero, el resultado será <code>NaN</code>.
+     </p>
+<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorE">"hola"</span>/<span class="colorD">2</span>);
+</code></pre>
+    <p>
+        Resultado en la consola: <code>NaN</code>
+    </p>
+    <p>
+        Representa la ausencia intencional de valor.
+    </p>
+    <hr>
+
+
+    <h2>Interacción con el Usuario.</h2>
+    <p>
+        <b class="amarillo">JavaScript</b> dispone de funciones integradas que permiten interactuar con el usuario mediante cuadros de diálogo.
+    </p>
+
+    <h3>Solicitud de datos con <code class="gris">prompt()</code></h3>
+    
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorA">prompt</span>(<span class="colorD">"Ingrese su nombre: "</span>);
+<span class="colorA">console</span>.log(<span class="colorD">"Bienvenido"</span> + <span class="colorA">nombre</span>);
+</code>
+</pre>
+    <p>
+        La función <code class="gris">prompt()</code> devuelve siempre un valor de tipo texto, independientemente del contenido ingresado por el usuario.
+    </p>
+    <p>
+        El valor que devuelve <code class="gris">prompt()</code> <b>siempre es interpretado como texto</b>, es decir, como un dato de tipo <em>string</em>. Esto ocurre incluso cuando el usuario ingresa números. Por esta razón, cuando se necesitan realizar operaciones matemáticas, es necesario convertir explícitamente el dato ingresado a un tipo numérico.
+    </p>
+    <p>
+        Por ejemplo:
+    </p>
+<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">numero</span> = <span class="colorA">Number</span>(<span class="colorA">prompt</span>(<span class="colorD">"Ingrese un número: "</span>));
+<span class="colorA">console</span>.log(<span class="colorA">numero</span> + <span class="colorD">10</span>);
+</code>
+</pre>
+    <p>
+        En este caso se utiliza la función <code class="gris">Number()</code> para transformar el valor ingresado desde texto a número, permitiendo realizar operaciones aritméticas correctamente.
+    </p>
+    <hr>
+
+
+
+
+    <fieldset>
+        <legend><b>Conversión de <code>tipos de datos</code></b></legend>
+        <p>
+            En muchas situaciones es necesario transformar un valor de un <code>tipo de dato</code> a otro. Esto ocurre frecuentemenete cuando los datos son ingresados mediante 
+            <code class="gris">prompt()</code>, ya que el navegador los interpreta como texto.
+        </p>
+        <p>
+            <b class="amarillo">JavaScript</b> dispone de diferentes funciones para realizar conversiones explícitas entre tipos de datos.
+        </p>
+        
+    </fieldset>
+    <br>
+    <table>
+            <thead>
+                <tr>
+                    <th>Función</th><th>Conversión</th><th>Ejemplo</th><th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="filao">
+                    
+                    <td><code class="gris">Number()</code></td><td>Convierte un valor a número.</td><td><code class="gris">Number("25")</code></td><td>25</td>
+                    
+                </tr>
+                <tr class="filac">
+                    <td><code class="gris">parseInt()</code></td><td>Convierte un texto a número entero</td><td>parseInt("25.8")</td><td>25</td>
+                </tr>
+                <tr class="filao">
+                    <td><code class="gris">parseFloat()</code></td><td>Convierte un texto a número decimal</td><td><code class="gris">parseFloat("25.8")</code></td><td>25.8</td>
+                </tr>
+                <tr class="filac">
+                    <td><code class="gris">string()</code></td><td>Convierte un valor a texto</td><td><code class="gris">String(100)</code></td><td>"100"</td>
+                </tr>
+                <tr class="filao">
+                    <td><code class="gris">Boolean()</code></td><td>Convierte un valor a booleano</td><td><code class="gris">Boolean(1)</code></td><td>true</td>
+                </tr>
+            </tbody>
+        </table>
+         <fieldset>
+                <legend>Ejercicios: </legend>
+        <ol>
+           
+            
+            <li>
+                <p>
+                    Crear un archivo <span class="naranja">HTML</span> en el cual se defina un título de página dentro de la etiqueta <code class="gris">&lt;title></code> con el texto <i>Documento HTML</i>, luego dentro del <code class="gris">&lt;body></code> agregar un encabezado <code class="gris">&lt;h1></code> que muestre el texto <i>Vinculando JavaScript</i>, además vincular correctamente un archivo <span class="amarillo">JavaScript</span> externo desde el <code class="gris">&lt;body></code> utilizando la etiqueta <code class="gris">&lt;script></code> y, por último, en dicho archivo <span class="amarillo">JavaScript</span> escribir una instrucción que utilice <code>console.log</code> para mostrar en la consola del navegador el mensaje <i>Hola desde JavaScript</i>.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Crear un archivo <span class="amarillo">JavaScript</span> en el cual se declaren diferentes variables que representen distintos tipos de datos, incluyendo un <code class="gris">número</code>, un valor <code class="gris">booleano</code>, un valor <code class="gris">undefined</code>, un valor <code class="gris">null</code>, un resultado que genere <code class="gris">NaN</code> (por ejemplo, una operación inválida), y un <code class="gris">string</code>, y luego utilizar el operador <span class="azul">typeof</span> para mostrar en la consola el tipo de dato de cada una de esas variables.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba un argumento y retorne el tipo de dato.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba un argumento y retorne true si es un número, y false en caso contrario.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba una cadena de texto y retorne la misma cadena pero en mayúsculas.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba un arreglo (array) y retorne el primer elemento del arreglo.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba un arreglo (array) y retorne el último elemento del arreglo.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Diseñar un programa en <span class="amarillo">JavaScript</span> en el cual se creen funciones orientadas a la conversión de datos. Cada función deberá recibir un valor por parámetro y retornar el resultado convertido.
+                </p>
+                <p>
+                    Se deberán implementar las siguientes funciones con nombres descriptivos:
+                </p>
+                    <ul>
+                        <li>convertirStringANumero()</li>
+
+                        <li>convertirNumeroAString()</li>
+
+                        <li>convertirBooleanoAString()</li>
+
+                        <li>convertirStringABooleano()</li>
+                    </ul>
+                    <p>
+                        Finalmente, utilizando console.log, se deberá mostrar:
+                    </p>
+                    <ul>
+                        <li>El valor original ingresado</li>
+                        <li>El tipo de dato de entrada (utilizando <code>typeof</code>)</li>
+                        <li>El valor convertido</li>
+                        <li>El tipo de dato resultante (también utilizando <code>typeof</code>)</li>
+                    </ul>
+                    <p>
+                        Importante: El uso del operador typeof no debe realizarse dentro de las funciones, sino únicamente al momento de mostrar los resultados.
+                    </p>
+                </p>
+                <hr>
+            </li>
+            <li>
+                 <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba un arreglo (array) y retorne el número de elementos que contiene.
+                 </p>
+                 <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span>1 que reciba dos cadenas de texto y retorne la concatenación de ambas.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba un argumento y retorne un mensaje indicando si el tipo de dato es <code class="gris">string</code>, <code class="gris">number</code>, o <code class="gris">boolean</code>.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba un argumento y retorne true si el tipo de dato no es ni <code class="gris">undefined</code> ni <code class="gris">null</code>.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Escribir una función <span class="amarillo">JavaScript</span> que reciba un arreglo (array) y retorne el tipo de dato de cada uno de sus elementos en un nuevo arreglo.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Diseñar un programa en el cual primero se solicite mediante un <code>prompt</code> el ingreso de la fecha actual (día, mes y año), luego se pida el nombre del usuario y posteriormente su fecha de nacimiento (día, mes y año); a partir de estos datos, calcular la edad teniendo en cuenta si ya cumplió años en la fecha actual ingresada, y finalmente mostrar con un <code>alert()</code> el nombre junto con la edad correspondiente. A continuación, solicitar al usuario si desea repetir el algoritmo ingresando si para continuar o no para finalizar; en caso de elegir repetir, el programa deberá volver a pedir únicamente el nombre y la fecha de nacimiento (sin volver a solicitar la fecha actual), y si se ingresa no, el programa deberá finalizar.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Diseñar un programa en el cual el usuario deba ingresar una contraseña numérica de 4 dígitos, implementando una función llamada validacion que verifique si la contraseña cumple con la condición de tener exactamente 4 dígitos; en caso de ser correcta, la contraseña debe almacenarse, y si no cumple la condición, el usuario dispondrá de hasta 4 intentos para ingresarla correctamente. Luego, implementar una segunda función llamada login, en la cual el usuario deberá ingresar nuevamente la contraseña previamente validada; si la contraseña es correcta, se deberá mostrar un mensaje con alert indicando acceso exitoso, y si es incorrecta, el usuario contará con hasta 4 intentos para ingresarla correctamente antes de finalizar el programa.
+                </p>
+                <hr>
+            </li>
+        </ol>
+        </fieldset>
+
+    
+</body>
+</html>
