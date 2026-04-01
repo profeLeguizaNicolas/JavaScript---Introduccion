@@ -37,21 +37,19 @@
     <p>
         Supongamos que tenemos un arachivo llamado <code class="gris">index.html</code>. Dentro de él escribimos la estructura básica de <b class="naranja">HTML</b>:
     </p>
-<pre><code class="cpp">&lt;!<span class="colorE">DOCTYPE</span> <span class="colorA">html</span>> <span class="colorV">&lt;!-- Define que el documento es HTML --></span>
-&lt;<span class="colorE">html</span> <span class="colorA">lang</span>=<span class="colorD">"es"</span>> <span class="colorV">&lt;!-- Etiqueta principal o raiz que encierra todo el contenido del documento--></span>
-    &lt;<span class="colorE">head</span>>  <span class="colorV">&lt;!-- Contiene información del documento, como el titulo, enlaces a CSS--></span>
-        &lt;<span class="colorE">meta</span> <span class="colorA">charset</span>=<span class="colorD">"UTF-8"</span>> <span class="colorV">&lt;!-- Define la codificación de caracteres para soportar tildes y ñ--></span>
-        &lt;<span class="colorE">link</span> <span class="colorA">rel</span>=<span class="colorD">"shortcut icon"</span> <span class="colorA">href</span>=<span class="colorD">""</span> <span class="colorA">type</span>=<span class="colorD">"image/x-icon"</span>><span class="colorV">&lt;!-- Se utiliza para indicar el ícono de la página en la pestaña del navegador y, al dejar la ruta vacía, se evita que el navegador intente buscar un favicon inexistente y genere un error.--></span>
-        &lt;<span class="colorE">meta</span> <span class="colorA">name</span>=<span class="colorD">"viewport"</span> <span class="colorA">content</span>=<span class="colorD">"width-device-width, initial-scale=1.0"</span>><span class="colorV"> &lt;!-- Ajusta la visualización en dispositivos móviles--></span> 
-        &lt;<span class="colorE">title</span>>Mi primera Documento HTML&lt;/<span class="colorE">JavaScript</span>>   <span class="colorV">&lt;!-- Define el título que aparece en la pestaña del navegador--></span>
-    &lt;/<span class="colorE">head</span>>
-    &lt;<span class="colorE">body</span>> 
-         &lt;<span class="colorE">h1</span>>Introducción a JavaScript&lt;<span class="colorE">/h1</span>> 
-         &lt;<span class="colorE">script</span> <span class="colorA">src</span>=<span class="colorD">"main.js"</span>>&lt;/<span class="colorE">script</span>> 
-    &lt;/<span class="colorE">body</span>>
-&lt;/<span class="colorE">html</span>>
-</code>
-</pre>
+<pre><code class="cpp">1    &lt;!<span class="colorE">DOCTYPE</span> <span class="colorA">html</span>> <span class="colorV">&lt;!-- Define que el documento es HTML --></span>
+2    &lt;<span class="colorE">html</span> <span class="colorA">lang</span>=<span class="colorD">"es"</span>> <span class="colorV">&lt;!-- Etiqueta principal o raiz que encierra todo el contenido del documento--></span>
+3        &lt;<span class="colorE">head</span>>  <span class="colorV">&lt;!-- Contiene información del documento, como el titulo, enlaces a CSS--></span>
+4            &lt;<span class="colorE">meta</span> <span class="colorA">charset</span>=<span class="colorD">"UTF-8"</span>> <span class="colorV">&lt;!-- Define la codificación de caracteres para soportar tildes y ñ--></span>
+5            &lt;<span class="colorE">link</span> <span class="colorA">rel</span>=<span class="colorD">"shortcut icon"</span> <span class="colorA">href</span>=<span class="colorD">""</span> <span class="colorA">type</span>=<span class="colorD">"image/x-icon"</span>><span class="colorV">&lt;!-- Se utiliza para indicar el ícono de la página en la pestaña del navegador y, al dejar la ruta vacía, se evita que el navegador intente buscar un favicon inexistente y genere un error.--></span>
+6            &lt;<span class="colorE">meta</span> <span class="colorA">name</span>=<span class="colorD">"viewport"</span> <span class="colorA">content</span>=<span class="colorD">"width-device-width, initial-scale=1.0"</span>><span class="colorV"> &lt;!-- Ajusta la visualización en dispositivos móviles--></span> 
+7            &lt;<span class="colorE">title</span>>Mi primera Documento HTML&lt;/<span class="colorE">JavaScript</span>>   <span class="colorV">&lt;!-- Define el título que aparece en la pestaña del navegador--></span>
+8        &lt;/<span class="colorE">head</span>>
+9        &lt;<span class="colorE">body</span>> 
+10            &lt;<span class="colorE">h1</span>>Introducción a JavaScript&lt;<span class="colorE">/h1</span>> 
+11            &lt;<span class="colorE">script</span> <span class="colorA">src</span>=<span class="colorD">"main.js"</span>>&lt;/<span class="colorE">script</span>> 
+12        &lt;/<span class="colorE">body</span>>
+13    &lt;/<span class="colorE">html</span>></code></pre>
     <p>
         La etiqueta <code class="gris">&lt;script></code> enlaza el archivo <b class="amarillo">JavaScript</b> mediante el atributo <span class="colorA">src</span>. En este caso el navegador buscará un archivo llamadoo <code class="gris">main.js</code> en la misma carpeta.
     </p>
@@ -76,9 +74,7 @@
     <p>
         A continuación, se incorpora la primer linea de código con el objetivo de verificar el correcto funcionamiento de la vinculación:
     </p>
-<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorV">"Vinculación exitosa"</span>);
-</code>
-</pre>
+<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorV">"Vinculación exitosa"</span>);</code></pre>
     <p>
         La instrucción <code class="gris">console.log()</code> permite mostrar información en la consola del navegador. En esta instancia, su finalidad es exclusivamente verificadora: confirmar que la integración entre el documento <b class="naranja">HTML</b> y el archivo <b class="amarillo">JavaScript</b> se ha realizado correctamente.
     </p>
@@ -96,12 +92,10 @@
     <p>
         La palabra reservada <code>let</code> se utiliza para declarar variables cuyo valor <b class="azul">puede cambiar durante la ejecución del programa</b>. Es la forma más común de declarar variables cuando se espera modificar el contenido almacenado.
     </p>
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorD">"Juan"</span>;
-<span class="colorE">let</span> <span class="colorA">edad</span> = 25;
-<span class="colorA">console</span>.log(<span class="colorA">nombre</span>);
-<span class="colorA">console</span>.log(<span class="colorA">edad</span>);
-</code>
-</pre>
+<pre><code class="cpp">1    <span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorD">"Juan"</span>;
+2    <span class="colorE">let</span> <span class="colorA">edad</span> = 25;
+3    <span class="colorA">console</span>.log(<span class="colorA">nombre</span>);
+4    <span class="colorA">console</span>.log(<span class="colorA">edad</span>);</code></pre>
     <b style="text-align: center;">Consola:</b>
 <pre><code class="cpp">Juan
 25
@@ -111,19 +105,13 @@
      <p>
         La palabra reservada <code>const</code> se utiliza para declarar variables cuyo valor <b class="azul">no debe cambiar</b> después de ser asignado.
      </p>
-<pre><code class="cpp">
-<span class="colorE">const</span> <span class="colorA">PI</span> = <span class="colorD">3.1416</span>;
-<span class="colorA">console</span>.log(<span class="colorA">PI</span>); 
-</code>
-</pre>
+<pre><code class="cpp">1    <span class="colorE">const</span> <span class="colorA">PI</span> = <span class="colorD">3.1416</span>;
+2    <span class="colorA">console</span>.log(<span class="colorA">PI</span>); </code></pre>
     <p>
         Si se intenta modificar una variable declara con <code>const</code>, el interprete generará un error.
     </p>
-<pre><code class="cpp">
-<span class="colorE">const</span> <span class="colorA">PI</span> = <span class="colorD">3.1416</span>;
-<span class="colorA">PI</span> = <span class="colorD">3.14</span>;
-</code>
-</pre>
+<pre><code class="cpp">1    <span class="colorE">const</span> <span class="colorA">PI</span> = <span class="colorD">3.1416</span>;
+2    <span class="colorA">PI</span> = <span class="colorD">3.14</span>;</code></pre>
     <p>
         Esto produce un error porque las constantes no pueden cambiar su valor.
     </p>
@@ -137,24 +125,18 @@
     <p>
         El método estándar para mostrar información es:
     </p>
-<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorV">"Mensaje de prueba"</span>);
-</code>
-</pre>
+<pre><code class="cpp">1    <span class="colorA">console</span>.log(<span class="colorV">"Mensaje de prueba"</span>);</code></pre>
     <p>
         También es posible mostrar el contenido de variables:
     </p>
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">curso</span> = <span class="colorV">"Laboratorio de programación"</span>;
-<span class="colorA">console</span>.log(<span class="colorA">curso</span>)
-</code>
-</pre>
+<pre><code class="cpp">1    <span class="colorE">let</span> <span class="colorA">curso</span> = <span class="colorV">"Laboratorio de programación"</span>;
+2    <span class="colorA">console</span>.log(<span class="colorA">curso</span>)</code></pre>
     
     <p>
         Asimismo, la consola permite evaluar expresiones matemáticas:
     </p>
-<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorD"> 15</span> + <span class="colorD">5 </span>);
-<span class="colorA">console</span>.log(<span class="colorD"> 20 </span>/<span class="colorD"> 4 </span>);
-</code>
-</pre>
+<pre><code class="cpp">1    <span class="colorA">console</span>.log(<span class="colorD"> 15</span> + <span class="colorD">5 </span>);
+2    <span class="colorA">console</span>.log(<span class="colorD"> 20 </span>/<span class="colorD"> 4 </span>);</code></pre>
     <p>
         Durante las primeras etapas del aprendizaje, la <b class="azul">consola</b> funciona como el principal medio de visualización de resultados.
     </p>
@@ -169,9 +151,7 @@
     
     <b style="text-align: center;">Texto (String).</b><br>
 
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorD">"Juan"</span>;
-</code>
-</pre>
+<pre><code class="cpp">1    <span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorD">"Juan"</span>;</code></pre>
 
     <p>
         Representa secuencias de caracteres delimitadas por comillas dobles.
@@ -179,31 +159,27 @@
 
     <b style="text-align: center;">Número (Number).</b><br>
 
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">edad</span> = <span class="colorD">30</span>;
-<span class="colorE">let</span> <span class="colorA">precio</span> = <span class="colorD">99.50</span>;
-</code></pre>
+<pre><code class="cpp">1    <span class="colorE">let</span> <span class="colorA">edad</span> = <span class="colorD">30</span>;
+2    <span class="colorE">let</span> <span class="colorA">precio</span> = <span class="colorD">99.50</span>;</code></pre>
     <p>
         Incluye tanto números enteros como decimales.
     </p>
 
     <b style="text-align: center;">Booleano (Boolean).</b><br>
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">activo</span> = <span class="colorD">true</span>;
-<span class="colorE">let</span> <span class="colorA">aprobado</span> = <span class="colorD">false</span>;
-</code></pre>
+<pre><code class="cpp">1    <span class="colorE">let</span> <span class="colorA">activo</span> = <span class="colorD">true</span>;
+2    <span class="colorE">let</span> <span class="colorA">aprobado</span> = <span class="colorD">false</span>;</code></pre>
     <p>
         Representa valores lógicos.
     </p>
 
     <b style="text-align: center;">Underfined</b>
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">dato</span>;
-<span class="colorA">console</span>.log(<span class="colorA">dato</span>);
-</code></pre>
+<pre><code class="cpp">1    <span class="colorE">let</span> <span class="colorA">dato</span>;
+2    <span class="colorA">console</span>.log(<span class="colorA">dato</span>);</code></pre>
     <p>
         Indica cuando una variable no ha sido definida.
     </p>
     <b style="text-align: center;">Null</b>
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">valor</span> = <span class="colorD">null</span>;
-</code></pre>
+<pre><code class="cpp">1    <span class="colorE">let</span> <span class="colorA">valor</span> = <span class="colorD">null</span>;</code></pre>
     <p>
         Representa la ausencia intencional de valor.
     </p>
@@ -217,8 +193,7 @@
      <p>
         Por ejemplo, si se intenta dividir texto que no representa un numero, el resultado será <code>NaN</code>.
      </p>
-<pre><code class="cpp"><span class="colorA">console</span>.log(<span class="colorE">"hola"</span>/<span class="colorD">2</span>);
-</code></pre>
+<pre><code class="cpp">1    <span class="colorA">console</span>.log(<span class="colorE">"hola"</span>/<span class="colorD">2</span>);</code></pre>
     <p>
         Resultado en la consola: <code>NaN</code>
     </p>
@@ -235,10 +210,8 @@
 
     <h3>Solicitud de datos con <code class="gris">prompt()</code></h3>
     
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorA">prompt</span>(<span class="colorD">"Ingrese su nombre: "</span>);
-<span class="colorA">console</span>.log(<span class="colorD">"Bienvenido"</span> + <span class="colorA">nombre</span>);
-</code>
-</pre>
+<pre><code class="cpp">1 <span class="colorE">let</span> <span class="colorA">nombre</span> = <span class="colorA">prompt</span>(<span class="colorD">"Ingrese su nombre: "</span>);
+2    <span class="colorA">console</span>.log(<span class="colorD">"Bienvenido"</span> + <span class="colorA">nombre</span>);</code></pre>
     <p>
         La función <code class="gris">prompt()</code> devuelve siempre un valor de tipo texto, independientemente del contenido ingresado por el usuario.
     </p>
@@ -248,10 +221,8 @@
     <p>
         Por ejemplo:
     </p>
-<pre><code class="cpp"><span class="colorE">let</span> <span class="colorA">numero</span> = <span class="colorA">Number</span>(<span class="colorA">prompt</span>(<span class="colorD">"Ingrese un número: "</span>));
-<span class="colorA">console</span>.log(<span class="colorA">numero</span> + <span class="colorD">10</span>);
-</code>
-</pre>
+<pre><code class="cpp">1    <span class="colorE">let</span> <span class="colorA">numero</span> = <span class="colorA">Number</span>(<span class="colorA">prompt</span>(<span class="colorD">"Ingrese un número: "</span>));
+2    <span class="colorA">console</span>.log(<span class="colorA">numero</span> + <span class="colorD">10</span>);</code></pre>
     <p>
         En este caso se utiliza la función <code class="gris">Number()</code> para transformar el valor ingresado desde texto a número, permitiendo realizar operaciones aritméticas correctamente.
     </p>
